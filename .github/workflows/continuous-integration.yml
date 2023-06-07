@@ -25,11 +25,11 @@ jobs:
         cache: maven
 
     - name: Build Application JAR
-      working-directory: ./DockerApp/java-spring-boot-api
+      working-directory: ./spring-boot-docker-app/java-spring-boot-api
       run: mvn clean package
 
     - name: Docker Compose Build
-      working-directory: ./DockerApp
+      working-directory: ./spring-boot-docker-app
       run: docker compose build
 
     - name: Push to Docker Hub
