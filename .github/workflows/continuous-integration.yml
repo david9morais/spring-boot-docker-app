@@ -29,6 +29,7 @@ jobs:
       run: mvn clean package
 
     - name: Docker Compose Build
+      working-directory: ./DockerApp
       run: docker compose build
 
     - name: Tag, and push image to Amazon ECR
