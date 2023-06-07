@@ -25,11 +25,9 @@ jobs:
         cache: maven
 
     - name: Build Application JAR
-      working-directory: ./David/Training/Java Spring React/DockerApp/java-spring-boot-api
       run: mvn clean package
 
     - name: Docker Compose Build
-      working-directory: ./spring-boot-docker-app
       run: docker compose build
 
     - name: Tag, and push image to Amazon ECR
