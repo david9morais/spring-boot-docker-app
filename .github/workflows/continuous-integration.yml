@@ -36,5 +36,5 @@ jobs:
       run: |
         docker tag ${{ secrets.DOCKER_USERNAME }}/java-spring-boot-api:latest ${{ secrets.DOCKER_USERNAME }}/java-spring-boot-api:${{ github.run_id }}
         
-        docker tag ${{ secrets.DOCKER_USERNAME }}/java-spring-boot-api:${{ github.run_id }}
-        docker tag ${{ secrets.DOCKER_USERNAME }}/java-spring-boot-api:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/java-spring-boot-api:${{ github.run_id }}
+        docker push ${{ secrets.DOCKER_USERNAME }}/java-spring-boot-api:latest
