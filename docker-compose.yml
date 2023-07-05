@@ -22,7 +22,7 @@ services:
     image: david9morais/java-spring-boot-api
     restart: always
     build:  ./java-spring-boot-api
-    working_dir: /java-spring-boot-api
+    working_dir: /DockerApp/java-spring-boot-api
     environment:
       TZ: Europe/Lisbon
       SPRING.DATASOURCE.URL: jdbc:mysql://db:3308/spring_boot_course?useTimezone=true&serverTimezone=UTC
